@@ -1,8 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
-    <h1>Create Post</h1>
-    {!! Form::open(['action' => 'PostController@store', 'method' => 'POST']) !!}
+    
+    <div class="container">
+        <h1>Create Post</h1>
+        {!! Form::open(['action' => 'PostController@store', 'method' => 'POST']) !!}
         <div class="form-group">
             {{Form::label('title', 'Title')}}
             {{Form::text('title','',[
@@ -24,4 +26,5 @@
             'class' => 'btn btn-primary'
         ])}}
     {!! Form::close() !!}
+    </div>
 @endsection
